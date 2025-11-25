@@ -1,0 +1,47 @@
+spring:
+  # 1. Configuração do Banco de Dados (PostgreSQL)
+  datasource:
+    url: jdbc:postgresql://localhost:5432/flashsale
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+  # Configurações do JPA (Como o Java fala com o Banco)
+  jpa:
+    hibernate:
+      ddl-auto: update # Cria/atualiza as tabelas automaticamente
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  # 2. Configuração do Redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  # 3. Configuração do Kafka (Que você já tinha feito!)
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: true
+    consumer:
+      # O grupo é importante para o Kafka saber quem leu o quê
+      group-id: flashsale-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
