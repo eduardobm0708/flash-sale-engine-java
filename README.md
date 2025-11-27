@@ -12,7 +12,7 @@ Este sistema simula o backend de um e-commerce lidando com milhares de requisiç
 * **Backpressure & Assincronismo:** O sistema desacopla a recepção do pedido (API) da persistência (Banco de Dados) usando **Apache Kafka**. Isso permite que a API responda em milissegundos (latência P95 < 30ms) mesmo que o banco de dados esteja lento
 * **Idempotência:** O Consumer do **Kafka** implementa padrões para garantir que uma mesma venda nunca seja processada duas vezes, mesmo em casos de falha de rede
 
-###💡 Decisões Técnicas (Architecture Decision Records - ADRs)
+### 💡 Decisões Técnicas (Architecture Decision Records - ADRs)
 
 Esta seção detalha as escolhas de arquitetura que transformam este projeto em um sistema de alta resiliência, demonstrando o domínio de **sistemas distribuídos.**
 1. Escolha de Java/Spring Boot para Alta Concorrência:
