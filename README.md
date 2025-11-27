@@ -71,7 +71,7 @@ Teste realizado com 100 Virtual Users simultâneos:
 ## 🎥 Demonstração
 
 Veja o sistema em ação processando 100% das vendas sem overselling:
-[[[<!-- Uploading "flash-engine-MOVIE ‐ Feito com o Clipchamp.mp4"... -->](https://github.com/user-attachments/assets/86c48e9e-d6fb-4115-b6fd-e2214a9fc691)](https://github.com/eduardobm0708/flash-sale-engine-java/issues/1#issue-3669488415)](https://github.com/user-attachments/assets/86c48e9e-d6fb-4115-b6fd-e2214a9fc691)
+https://github.com/eduardobm0708/flash-sale-engine-java/issues/1#issue-3669488415
 
 ## 🛠️ Tech Stack
 
