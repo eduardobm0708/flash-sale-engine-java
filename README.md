@@ -89,11 +89,9 @@ https://github.com/user-attachments/assets/268ab46f-e717-4594-b258-6cb3d65aaae2
 A facilidade de execução é crucial. Siga os passos abaixo para iniciar a aplicação e testar o sistema de Flash Sale:
 
 ### 1. Subir a infraestrutura
-Inicie os serviços do Docker (PostgreSQL, Redis, Kafka, Prometheus, Grafana)
+Inicie os serviços do Docker (PostgreSQL, Redis, Kafka, Prometheus, Grafana):
 
-    ```bash
-    docker-compose up -d
-    ```
+       docker-compose up -d
 
 2. Inicie a aplicação Spring Boot via sua IDE favorita (IntelliJ, Eclipse) ou usando Maven:
 
